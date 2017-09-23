@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -ex
+
+apk update
+apk add beanstalkd
+
+mkdir -p "$BEANSTALKD_BINLOG_PATH"
+chown -R beanstalk: "$BEANSTALKD_BINLOG_PATH"

@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+set -e
+
+if [ "$1" = "beanstalkd" ]; then
+
+    set -- "$@" -V
+    set -- "$@" -p 11300
+    set -- "$@" -b "$BEANSTALKD_BINLOG_PATH"
+
+    if [ "$BEANSTALKD_BINLOG_INTERVAL" ]; then
+        set -- "$@" "-f $BEANSTALKD_BINLOG_INTERVAL"
+    fi
+
+fi; 
+
+exec "$@"
