@@ -1,18 +1,13 @@
-# Beanstalk Message Queue für Docker
+# Beanstalk Message Queue for Docker
 
-## Umgebungsvariablen
+Small image (~ 2MB) for Beanstalkd based on Alpine.
 
-Standardwert: 11300
+## Environment variables
 
 ### BEANSTALKD_BINLOG_PATH
 
-Pfad in der die Jobs gespeichert werden. Unter diesem Pfad sollte ein Docker-Volume gemountet sein, um die Jobs nach
-einem Neustart des Containers wiederherzustellen.  
-
-Standardwert: /var/lib/beanstalkd/binlog
+Default: /var/lib/beanstalkd/binlog
 
 ### BEANSTALKD_BINLOG_INTERVAL
 
-Interval in Millisekunden in dem die Jobs in ``BEANSTALKD_BINLOG_PATH` gespeichert werden.
-
-Standardwert: 60000
+Default: 60000
