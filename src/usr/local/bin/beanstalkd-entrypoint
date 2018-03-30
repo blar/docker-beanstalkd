@@ -3,7 +3,6 @@
 set -e
 
 if [ "$1" = "beanstalkd" ]; then
-
     set -- "$@" -V
     set -- "$@" -p 11300
     set -- "$@" -b "$BEANSTALKD_BINLOG_PATH"

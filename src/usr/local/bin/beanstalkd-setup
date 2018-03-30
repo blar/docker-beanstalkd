@@ -2,8 +2,7 @@
 
 set -ex
 
-apk update
-apk add beanstalkd
+apk add --no-cache beanstalkd
 
 mkdir -p "$BEANSTALKD_BINLOG_PATH"
 chown -R beanstalk: "$BEANSTALKD_BINLOG_PATH"

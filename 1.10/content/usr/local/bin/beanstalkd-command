@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-echo -e "$@\r\n" | nc -v $BEANSTALKD_HOST $BEANSTALKD_PORT
